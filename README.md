@@ -1,39 +1,73 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Tremaine Inn
 
-Welcome,
+## About
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+The website is for the **fictitious** inn: Tremaine Inn.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+The Tremaine Inn is a place where customers can stay the night, have an evening meal or drink, or can have breakfast. The Inn caters mostly to business people, who just stay one night or two, traveling through. It also caters to couples traveling through to or returning from their holiday destination.
 
-## Codeanywhere Reminders
+For the rest of the document the customer will be referred to as the user.
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+## UX Design
 
-`python3 -m http.server`
+### User Demographic
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+The website caters for a wide demographic, for people of all ages.
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+### User Goal
 
-`http_server`
+The goal is for the user to reserve a room for one or two nights by using the website.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### User Epics and Stories
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+### Wireframe and Mockup
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### Site Navigation
 
-To log into the Heroku toolbelt CLI:
+### Entity Relationship Diagram
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+![Entity Relationship Diagram](readme/erd-tremaine-inn.svg)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+## Features
 
----
+### Existing Features
 
-Happy coding!
+### Future Features
+
+- Payment system to collect deposit for booking rooms
+- Notify customer to confirm booking by text message and email
+
+## Technologies
+
+### Languages Used
+
+- HTML
+- CSS
+- Javascript
+- Python
+
+### Libraries Used
+
+#### Javascript
+
+- jQuery
+
+#### Python
+
+- Django
+
+### Database
+
+- Postgresql, hosted on ElephantSQL
+
+## Testing
+
+The details of the testing can be found [here in the TESTING.md](TESTING.md).
+
+## Deployment
+
+## References
+
+### Resources
+
+### Credits
