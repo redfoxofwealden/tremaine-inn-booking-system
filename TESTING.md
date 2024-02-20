@@ -1,6 +1,19 @@
 # Testing
 
+## Contents
+
+- [Features Testing](#features-testing "Features Testing")
+- [Browser Compatibility](#browser-compatibility "Browser Compatibility")
+- [Responsiveness](#responsiveness "Responsiveness")
+- [Code Validation](#code-validation "Code Validation")
+- [Bugs](#bugs "Bugs")
+- [Lighthouse](#lighthouse "Lighthouse")
+- [User Story Testing](#user-story-testing "User Story Testing")
+
 back to [README](README.md)
+
+> [!NOTE]
+> The tables here are taken from [README.md - Manual Testing Write Up Overview](https://www.youtube.com/watch?v=Q66HZgkDSOo) video and are used to indicate what's expected to be placed here.
 
 ## Features Testing
 
@@ -26,7 +39,7 @@ back to [README](README.md)
 | iPhone 5            | N/A             | Good              | Good & Fair
 | iPad Pro            | Fair            | N/A               | Fair
 | Desktop 1024px      | Good            | N/A               | Good
-| `sudo apt install`  | Works           | Doesn't work      | Good
+| Desktop 4K          | Works           | Doesn't work      | Poor
 
 ## Code Validation
 
@@ -53,7 +66,16 @@ back to [README](README.md)
 
 ## User Story Testing
 
-## Accessibility
+### Create User Account for Sign-In
 
-Tools recommended:
-WebAIM, Coolors
+### Change Sign-In Details
+
+### Delete User Account
+
+### Book a Room
+
+### Change Booking(s)
+
+### Cancel Booking(s)
+
+### Website UI
