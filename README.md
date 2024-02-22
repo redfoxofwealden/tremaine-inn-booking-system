@@ -27,7 +27,7 @@ The Tremaine Inn and all information about it is completely **fictitious** and *
 
 ### User Demographic
 
-The website is expected to used by users of all ages, from young adults to old.
+The website is expected to used by holiday makers and business people who want to book a room for the night and are traveling through.
 
 ### User Goal
 
@@ -37,7 +37,33 @@ The goal is for the user to book a room for one or more nights by using the webs
 
 #### Epics and User Stories
 
-The epics and user stories have been created as issues on GitHub. These can be found here under [issues](https://github.com/redfoxofwealden/tremaine-inn-booking-system/issues). Then these are then placed onto the [Project Board](https://github.com/users/redfoxofwealden/projects/6).
+The epics and user stories have been created as issues on GitHub. These can be found here under [issues](https://github.com/redfoxofwealden/tremaine-inn-booking-system/issues).
+
+The list of user stories can here under the epics below.
+
+##### EPIC: Website UX
+
+Link to the [EPIC: Website UX](https://github.com/redfoxofwealden/tremaine-inn-booking-system/issues/9) issue.
+
+- [USER STORY: Home page (landing page)](https://github.com/redfoxofwealden/tremaine-inn-booking-system/issues/10)
+
+##### EPIC: Booking Feature
+
+Link to the [EPIC: Booking Feature](https://github.com/redfoxofwealden/tremaine-inn-booking-system/issues/1) issue.
+
+- [USER STORY: Create User Account for Sign-In](https://github.com/redfoxofwealden/tremaine-inn-booking-system/issues/2)
+- [USER STORY: Change Sign-In Details](https://github.com/redfoxofwealden/tremaine-inn-booking-system/issues/3)
+- [USER STORY: Delete User Account](https://github.com/redfoxofwealden/tremaine-inn-booking-system/issues/4)
+- [USER STORY: Book a Room](https://github.com/redfoxofwealden/tremaine-inn-booking-system/issues/5)
+- [USER STORY: Change Booking(s)](https://github.com/redfoxofwealden/tremaine-inn-booking-system/issues/6)
+- [USER STORY: Cancel Booking(s)](https://github.com/redfoxofwealden/tremaine-inn-booking-system/issues/7)
+- [USER STORY: Website UI](https://github.com/redfoxofwealden/tremaine-inn-booking-system/issues/8)
+
+All user stories are placed in the Product Backlog [here](https://github.com/redfoxofwealden/tremaine-inn-booking-system/milestone/2).
+
+The user stories are arranged in order of importance the product backlog, the most important being placed at the top.
+
+The four most important stories are then place into the first iteration milestone: [Iteration 1](https://github.com/redfoxofwealden/tremaine-inn-booking-system/milestone/3). From there all user stories are placed on the Todo board in the [Project Board](https://github.com/users/redfoxofwealden/projects/6).
 
 ### Wireframes
 
@@ -102,6 +128,12 @@ Booking page.
 - Postgresql, hosted on ElephantSQL for production.
 - Postgresql, hosted on local computer for development and testing.
 
+## Development
+
+### Setup
+
+
+
 ## Testing
 
 The details of the testing can be found [here in TESTING.md](TESTING.md).
@@ -112,13 +144,13 @@ The details of the testing can be found [here in TESTING.md](TESTING.md).
 
 ### Resources
 
-The wireframes and entity relationship diagrams was created using [draw.io](https://www.drawio.com/) app.
+[Draw.io](https://www.drawio.com/) was used to create the wireframes and entity relationship diagrams.
 
 The format and sections included in the README and TESTING documents was inspired from these videos:-
 
 - [Portfolio Project 4: The guide to MVP](https://www.youtube.com/watch?v=vIv1c6RLBac)
 - [README.md - Manual Testing Write Up Overview](https://www.youtube.com/watch?v=Q66HZgkDSOo)
 
-The guide to develop the project was inspired from [Django Blog Webinar](https://www.youtube.com/watch?v=YH--VobIA8c) and from the module: "Learning to Develop with Django".
+The guide to develop the project was inspired from [Django Blog Webinar](https://www.youtube.com/watch?v=YH--VobIA8c) and from the module in the LMS: "Learning to Develop with Django".
 
 ### Credits

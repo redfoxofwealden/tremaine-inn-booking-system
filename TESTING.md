@@ -15,6 +15,10 @@ back to [README](README.md)
 > [!NOTE]
 > The tables here are taken from [README.md - Manual Testing Write Up Overview](https://www.youtube.com/watch?v=Q66HZgkDSOo) video and are used to indicate what's expected to be placed here.
 
+## Development Setup
+
+
+
 ## Features Testing
 
 | Feature    | Test Case         | Outcome
