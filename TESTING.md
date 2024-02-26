@@ -15,6 +15,40 @@ back to [README](README.md)
 
 ## Development Setup
 
+### Django setup
+
+After creating the project in Django it was tested. The result is as shown below:
+
+![Django install success](readme/django-setup-sucess.png)
+
+After creating the environment variables these were tested.
+
+### Test environment variables
+
+Initially the global variable `DEBUG` in `settings.py` was set as below:
+
+```python
+DEBUG = bool(os.environ.get('DEVELOPMENT_DEBUG'))
+```
+
+However it resulted in a bug as below
+
+| Bug | Description | Solution applied | Result
+| --- | ---         | ---              | ---
+| DEBUG was always to True, even if DEVELOPMENT_DEBUG was set to '0'| The result was as shown in the previous section above | By altering the code as below | The result as shown below
+
+The code was correct to as below:
+
+```python
+DEBUG = bool(os.environ.get('DEVELOPMENT_DEBUG') != '0')
+```
+
+Screen shot of the result after fixing the bug:
+
+![screen shot after fixing bug](readme/django-prod-sucess.png)
+
+The reason for message shown above is that the home page has not been created. This will be fixed when development on the first user story is worked on.
+
 ## User Story Testing
 
 ### Create User Account for Sign-In
