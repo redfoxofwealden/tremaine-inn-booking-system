@@ -5,8 +5,10 @@
 - [About](#about "About")
 - [UX Design](#ux-design "UX Design")
 - [Features](#features "Features")
+- [Development](#development "Development")
 - [Technologies](#technologies "Technologies")
 - [Testing](#testing "Testing")
+- [Deployment](#deployment "Deployment")
 - [References](#references "References")
 
 ## About
@@ -132,13 +134,183 @@ Booking page.
 
 ### Setup
 
+The project was developed with **vscode** on local personal computer.
 
+#### Set Python Version
+
+For this project the python version was set to version 3.9.18 in vscode.
+
+To confirm that the python version is set the command `python3 -V` was issued. The result is as shown below.
+
+![terminal with python3 version displayed](readme/pre-virt-environ-python-ver.png)
+
+#### Setup Virtual Environment
+
+Next run the terminal to setup the virtual environment. This was accomplished with this command as below
+
+```command
+python3 -m venv .venv
+```
+
+Rerun the terminal to ensure that virtual environment is active and is as shown below
+
+![virtual environment active](readme/virt-environ-vscode.png)
+
+and check that the python version is as it should be.
+
+![virtual environment active](readme/virt-environ-python-ver.png)
+
+Next the libraries are installed.
+
+#### Install Django and other Libraries
+
+The first library to install is Django version 4.2 with this command:
+
+```command
+pip3 install Django~=4.2.1
+```
+
+Next the library: gunicorn is installed:
+
+```command
+pip3 install gunicorn
+```
+
+This is library is needed when the project is deployed to Heroku.
+
+Next the library requirements are recorded in `requirements.txt` file by executing this command:
+
+```command
+pip3 freeze --local > requirements.txt
+```
+
+Next the project is created with this command:
+
+```command
+django-admin startproject tremaineinn .
+```
+
+Next the installation is tested. For details see [Development Setup section](TESTING.md) in the TESTING.md.
+
+#### Creating Environment Variables
+
+After testing was completed the `env.py` file was created. The contents is as below:
+
+```python
+import os
+
+os.environ.setdefault('DATABASE_URL', '')
+os.environ.setdefault('DEVELOPMENT_DEBUG', '1')
+os.environ.setdefault(
+    'SECRET_KEY',
+    '<your secret key from settings.py>'
+)
+```
+
+The the environment variables used in `env.py`.
+
+| Environment variable | Contents                           | Purpose
+| ---                  | ---                                | ---
+| DATABASE_URL         | \<address of postgresql database>  | Address of the postgresql database instance
+| DEVELOPMENT_DEBUG    | Set to either 0 or 1               | Set to 1 for development on local pc
+|                      |                                    | Set to 0 on Heroku platform
+| SECRET_KEY           | \<secret key in settings.py>       | Secret key taken from settings.py; this key will be different on Heroku platform
+
+Initially `DATABASE_URL` will to be set to `''`. Later in the development cycle this will be set the local database instance on the pc and to the instance on ElephantSQL.
+
+The `DEBUG` variable in `settings.py` is set as follows
+
+```python
+DEBUG = bool(os.environ.get('DEVELOPMENT_DEBUG') != '0')
+```
+
+By setting the `DEBUG` variable this way allows for frequent deployment to the production platform, i.e. Heroku, without constantly changing `DEBUG` from False to True and back again.
+
+The `SECRET_KEY` will be set to the existing key in `settings.py` and will be changed at the end of development.
+
+After creating the `env.py` and modifying `settings.py` the project tested again with `DEBUG` set to True and again with it set to False.
+
+#### Deployment to Heroku
+
+Next is to create the app on Heroku. The environment variables used on the local machine will also be set there. The exceptions is for the `DEVELOPMENT_DEBUG` which is set to '0'. Then the project is deployed. For details of deployment see [Deployment section](#deployment "Deployment").
+
+#### Final Deployment to Heroku
+
+The variable `DEBUG` will be to False but just before final deployment.
+
+```python
+DEBUG = False
+```
+
+Afterwards the environment variable `DEVELOPMENT_DEBUG` will be removed from the 'Config Vars' on Heroku.
 
 ## Testing
 
 The details of the testing can be found [here in TESTING.md](TESTING.md).
 
 ## Deployment
+
+The deployment was carried out after creating the app `ci-rfow-tremaine-inn` on Heroku. The deployment is carried using the Heroku toolbelt.
+
+Before deployment three files are required:
+
+- Procfile
+- runtime.txt
+- requirements.txt
+
+The `Procfile` contains the following:
+
+```command
+web: gunicorn tremaineinn.wsgi
+```
+
+The file is required to run Django on Heroku.
+
+The `runtime.txt` file contains information about the version of python to install:
+
+```command
+python-3.9.18
+```
+
+The `requirements.txt` would have been created during the project setup.
+
+After these files have been created, the project can be deployed.
+
+To deploy do the following steps in order:
+
+Login to Heroku with this command in terminal:
+
+```command
+heroku login
+```
+
+After the command is issued the browser opens up to the Heroku log-in website. You are required to login and authenticate. After the login and authentication process has been completed successfully, you can close the browser and return to the terminal.
+
+To confirm that you are logged-in issue the command:
+
+```command
+heroku apps
+```
+
+If you see a list of apps you are logged-in.
+
+Next connect to Heroku app created `ci-rfow-tremaine-inn` with the command:
+
+```command
+heroku git:remote --app ci-rfow-tremaine-inn
+```
+
+To confirm that there is a remote connection with the app by the command:
+
+![git remote -v command issue and results](readme/heroku-git-remote-connect.png)
+
+Now that heroku app is connected, the project can be deployed by issuing the command:
+
+```command
+git push heroku main
+```
+
+The project is now deployed and can be accessed [here](https://ci-rfow-tremaine-inn-dd9cc09a704a.herokuapp.com/).
 
 ## References
 
@@ -152,5 +324,10 @@ The format and sections included in the README and TESTING documents was inspire
 - [README.md - Manual Testing Write Up Overview](https://www.youtube.com/watch?v=Q66HZgkDSOo)
 
 The guide to develop the project was inspired from [Django Blog Webinar](https://www.youtube.com/watch?v=YH--VobIA8c) and from the module in the LMS: "Learning to Develop with Django".
+
+The following articles from Heroku helped me to understand why the libraries, gunicorn and whitenoise was needed:
+
+- [Configuring Django Apps for Heroku](https://devcenter.heroku.com/articles/django-app-configuration)
+- [Django and Static Assets](https://devcenter.heroku.com/articles/django-assets)
 
 ### Credits

@@ -2,22 +2,34 @@
 
 ## Contents
 
+- [Development Setup](#development-setup "Development Setup")
+- [User Story Testing](#user-story-testing "User Story Testing")
 - [Features Testing](#features-testing "Features Testing")
 - [Browser Compatibility](#browser-compatibility "Browser Compatibility")
 - [Responsiveness](#responsiveness "Responsiveness")
 - [Code Validation](#code-validation "Code Validation")
 - [Bugs](#bugs "Bugs")
 - [Lighthouse](#lighthouse "Lighthouse")
-- [User Story Testing](#user-story-testing "User Story Testing")
 
 back to [README](README.md)
 
-> [!NOTE]
-> The tables here are taken from [README.md - Manual Testing Write Up Overview](https://www.youtube.com/watch?v=Q66HZgkDSOo) video and are used to indicate what's expected to be placed here.
-
 ## Development Setup
 
+## User Story Testing
 
+### Create User Account for Sign-In
+
+### Change Sign-In Details
+
+### Delete User Account
+
+### Book a Room
+
+### Change Booking(s)
+
+### Cancel Booking(s)
+
+### Website UI
 
 ## Features Testing
 
@@ -67,19 +79,3 @@ back to [README](README.md)
 | ---         | ---                  | ---              | ---
 | Mobile      | (screenshot)         | Errors were fixed by (solution) | (screenshot)
 | Desktop     | (screenshot)         | Errors were fixed by (solution) | (screenshot)
-
-## User Story Testing
-
-### Create User Account for Sign-In
-
-### Change Sign-In Details
-
-### Delete User Account
-
-### Book a Room
-
-### Change Booking(s)
-
-### Cancel Booking(s)
-
-### Website UI
