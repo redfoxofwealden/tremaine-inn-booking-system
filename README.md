@@ -220,4 +220,18 @@ The following articles from Heroku helped me to understand why the libraries, gu
 - [Configuring Django Apps for Heroku](https://devcenter.heroku.com/articles/django-app-configuration)
 - [Django and Static Assets](https://devcenter.heroku.com/articles/django-assets)
 
+The Bootstrap documentation was used extensively during development:
+
+- [Bootstrap Document](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+
 ### Credits
+
+The image used for the home page was taken from Pexels. The link is below:
+
+- [Image used for the Home page](https://www.pexels.com/photo/picturesque-view-of-lake-and-forest-in-mountains-3934023/)
+
+The Bootstrap components: navbar, card and list was copied and modified from these links below:
+
+- [Bootstrap navbar component](https://getbootstrap.com/docs/5.3/components/navbar/#nav)
+- [Bootstrap card component](https://getbootstrap.com/docs/5.3/components/card/#titles-text-and-links)
+- [Bootstrap list component](https://getbootstrap.com/docs/5.3/components/card/#list-groups)

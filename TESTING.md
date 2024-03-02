@@ -51,6 +51,16 @@ The reason for message shown above is that the home page has not been created. T
 
 ## User Story Testing
 
+### Home Page (Landing page)
+
+Link to the issue: [USER STORY: Home page (landing page)](https://github.com/redfoxofwealden/tremaine-inn-booking-system/issues/10)
+
+#### Bugs Encountered
+
+| Bug Description | Solution applied
+| ---             | ---
+| After deployment the image on home page was not displayed. | Set the `STATIC_ROOT` variable to point to `staticfiles` folder, run collectstatic and redeploy
+
 ### Create User Account for Sign-In
 
 ### Change Sign-In Details
