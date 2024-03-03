@@ -30,8 +30,11 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # DEBUG = False
 DEBUG = bool(os.environ.get('DEVELOPMENT_DEBUG') != '0')
 
-ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
-
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    '8000-redfoxofwealden-tremaine-mx68nx7f84.us1.codeanyapp.com',
+    '.herokuapp.com'
+]
 
 # Application definition
 
