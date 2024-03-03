@@ -3,6 +3,7 @@
 ## Contents
 
 - [Setup](#setup "Setup")
+- [Database](#database "Database")
 
 ### Setup
 
@@ -115,3 +116,20 @@ DEBUG = False
 ```
 
 Afterwards the environment variable `DEVELOPMENT_DEBUG` will be removed from the 'Config Vars' on Heroku.
+
+## Database
+
+The following libraries were installed:
+
+```command
+pip3 install pyscopg
+```
+
+```command
+pip3 install dj-database-url
+```
+
+```command
+pip3 install django-allauth
+```
+
