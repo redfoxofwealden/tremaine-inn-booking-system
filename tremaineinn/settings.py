@@ -55,6 +55,11 @@ SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://*.codeanyapp.com',
+    'https://*.herokuapp.com',
+]
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
@@ -87,7 +92,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'tremaineinn.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
