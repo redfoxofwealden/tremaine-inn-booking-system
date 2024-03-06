@@ -1,5 +1,8 @@
 {% load static %}
 
+{% url 'home' as home %}
+{% url 'register' as register %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,9 +36,9 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav mx-auto">
-                        <a class="nav-link active text-center" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active text-center" aria-current="page" href="{{ home }}">Home</a>
                         <a class="nav-link text-center" href="#">Sign-In</a>
-                        <a class="nav-link text-center" href="#">Register</a>
+                        <a class="nav-link text-center" href="{{ register }}">Register</a>
                         <a class="nav-link text-center" href="#">About</a>
                     </div>
                 </div>
