@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!--
+    The form was copied and modified from
+    (https://getbootstrap.com/docs/5.3/components/card/#header-and-footer)
+-->
+<div class="my-3 d-flex justify-content-evenly">
+    <div class="card card-info-width">
+        <div class="card-header">
+            Sign Up Unsucessful!
+        </div>
+        <div class="card-body">
+            <p class="card-text">The email that you've entered has already been used.<br>
+                Enter an other email address.
+            </p>
+            <a href="{% url 'register' %}" class="btn btn-primary">Back to
+                Register</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

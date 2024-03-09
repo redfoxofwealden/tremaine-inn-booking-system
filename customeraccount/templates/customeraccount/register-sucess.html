@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!--
+    The form was copied and modified from
+    (https://getbootstrap.com/docs/5.3/components/card/#header-and-footer)
+-->
+<div class="my-3 d-flex justify-content-evenly">
+    <div class="card card-info-width">
+        <div class="card-header">
+            Sign up Sucessful!
+        </div>
+        <div class="card-body">
+            <p class="card-text">You're now sign up.</p>
+            <a href="{% url 'home' %}" class="btn btn-primary">Home</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
