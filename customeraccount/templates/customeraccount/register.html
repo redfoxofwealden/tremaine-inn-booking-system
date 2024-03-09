@@ -6,21 +6,41 @@
     The form was copied and modified from
     (https://getbootstrap.com/docs/5.3/forms/overview/)
 -->
-<form>
-    <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-    </div>
-    <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1">
-    </div>
-    <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1">
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+<div class="my-3 d-flex justify-content-evenly">
+    <div class="card card-info-width">
+        <form class="card-body" method="POST" action="{% url 'register' %}">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="firstName" class="form-label">First Name</label>
+                <input type="text" class="form-control" id="firstName" name="firstname" required>
+            </div>
+            <div class="mb-3">
+                <label for="lastName" class="form-label">Last Name</label>
+                <input type="text" class="form-control" id="lastName" name="lastname" required>
+            </div>
+            <div class="mb-3">
+                <label for="telNumber" class="form-label">Telephone Number</label>
+                <input type="tel" class="form-control" id="telNumber" name="telnumber">
+            </div>
+            <div class="mb-3">
+                <label for="mobileNumber" class="form-label">Mobile Number</label>
+                <input type="tel" class="form-control" id="mobileNumber" name="mobilenumber"> 
+            </div>
+            <div class="mb-3">
+                <label for="emailAddress" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="emailAddress" name="emailaddress" required>
+            </div>
+            <div class="mb-3">
+                <label for="passwordOne" class="form-label">Password</label>
+                <input type="password" class="form-control" id="passwordOne" name="password-one" required>
+            </div>
+            <div class="mb-3">
+                <label for="passwordTwo" class="form-label">Password</label>
+                <input type="password" class="form-control" id="passwordTwo" name="password-two" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>    
+</div>
 
 {% endblock %}
