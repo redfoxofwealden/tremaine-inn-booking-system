@@ -2,6 +2,7 @@
 
 {% url 'home' as home %}
 {% url 'register' as register %}
+{% url 'sign-in' as signin %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -37,8 +38,8 @@
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav mx-auto">
                         <a class="nav-link active text-center" aria-current="page" href="{{ home }}">Home</a>
-                        <a class="nav-link text-center" href="#">Sign-In</a>
-                        <a class="nav-link text-center" href="{{ register }}">Register</a>
+                        <a class="nav-link text-center" href="{{ signin }}">Sign-In</a>
+                        <a class="nav-link text-center" href="{{ register }}">Sign Up</a>
                         <a class="nav-link text-center" href="#">About</a>
                     </div>
                 </div>

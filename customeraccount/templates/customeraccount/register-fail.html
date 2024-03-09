@@ -6,17 +6,20 @@
     The form was copied and modified from
     (https://getbootstrap.com/docs/5.3/components/card/#header-and-footer)
 -->
+
 <div class="my-3 d-flex justify-content-evenly">
     <div class="card card-info-width">
-        <div class="card-header">
-            Sign Up Unsucessful!
+        <div class="card-header text-center">
+            Sign Up Unsuccessful!
         </div>
         <div class="card-body">
-            <p class="card-text">Make sure that you've entered a valid password<br>
-                and that both passwords match.
+            <p class="card-text">The passwords entered doesn't match or are not valid.<br>
+                Make sure that you enter a valid password.
             </p>
-            <a href="{% url 'register' %}" class="btn btn-primary">Back to
-                Register</a>
+            <div class="d-flex justify-content-evenly">
+                <a href="{% url 'register' %}" class="btn btn-primary">Back to
+                    Register</a>    
+            </div>
         </div>
     </div>
 </div>

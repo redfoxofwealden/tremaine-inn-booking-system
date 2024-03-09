@@ -29,7 +29,11 @@ def register(request):
                     customer.save()
 
                 except Exception:
-                    return render(request, 'customeraccount/register-username-fail.html', status=401)
+                    return render(
+                        request,
+                        'customeraccount/register-username-fail.html',
+                        status=401
+                    )
 
                 return render(request, 'customeraccount/register-sucess.html', status=201)
 
@@ -39,3 +43,10 @@ def register(request):
             return unauthorised(request)
 
     return render(request, 'customeraccount/register.html')
+
+
+def sign_in(request):
+    if request.method == 'POST':
+        pass
+
+    return render(request, 'customeraccount/sign-in.html')
